@@ -9,7 +9,7 @@
             "type": "python",
             "request": "launch",
             "program": "${file}",
-            "args": ["--runner=DirectRunner", "--mode=local", "--project=devopsproject1-350219", "--input_sub=projects/northwell-fhir-dev/subscriptions/northwell-fhir-notifications-mcd-sub"],
+            "args": ["--runner=DirectRunner", "--mode=local", "--project=YOUR_PROJECT_NAME", "--input_sub=YOUR_PUB_SUB"],
             "console": "integratedTerminal",
             "justMyCode": true
         }
