@@ -80,6 +80,7 @@ if __name__=='__main__':
         
         # Set `save_main_session` to True so DoFns can access globally imported modules.
         options.view_as(SetupOptions).save_main_session = True
+        options.view_as(StandardOptions).streaming = True
         pipeline_options = options.view_as(CustomOptions)
 
         # Clear any other logging configs
