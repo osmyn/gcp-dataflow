@@ -47,7 +47,7 @@ pip install 'apache-beam[gcp]'
 
 * Add your GCP project and Pub/Sub to the args
 
-* `"args": ["--runner=DirectRunner", "--mode=local", "--myproject=YOUR_PROJECT_NAME", "--input_sub=YOUR_INPUT_SUBSCRIPTION"]`
+* `"args": ["--runner=DirectRunner", "--mode=local", "--project=YOUR_PROJECT_NAME", "--input_sub=YOUR_INPUT_SUBSCRIPTION"]`
 
 ## Run as Dataflow in GCP
 
