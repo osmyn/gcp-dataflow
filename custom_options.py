@@ -34,7 +34,6 @@ class CustomOptions(PipelineOptions):
     )
     parser.add_argument(
         "--mode",
-        type=float,
         default="GCP",
         help="GCP or local mode.",
     )

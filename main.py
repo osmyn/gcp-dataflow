@@ -38,8 +38,11 @@ def partition_resource_type(payload, len):
         resourceType = 'OtherResourceType'
         if "resourceType" in data:
             resourceType = data["resourceType"]
-
-        return resourceTypes.index(resourceType)
+        
+        if resourceType in resourceTypes:
+            return resourceTypes.index(resourceType)
+        
+        return resourceTypes.index('OtherResourceType') 
     except Exception as e:
         logging.exception(f'partition_resource_type: {str(e)}!')
         return resourceTypes.index('OtherResourceType')

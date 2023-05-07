@@ -15,7 +15,7 @@ class Save(DoFn):
 
             db = firestore.Client(project)
             # Upsert the contact info - merge=True to maintain older fields
-            db.collection(collection).document(id).set(element.to_dict(), merge=True)
+            db.collection(collection).document(id).set(element, merge=True)
 
         except Exception as e:
             logging.exception(f'Save: {str(e)}')

@@ -9,7 +9,7 @@
             "type": "python",
             "request": "launch",
             "program": "${file}",
-            "args": ["--runner=DirectRunner", "--local=True"],
+            "args": ["--runner=DirectRunner", "--mode=local", "--project=YOUR_PROJECT_NAME", "--input_sub=YOUR_INPUT_SUBSCRIPTION"],
             "console": "integratedTerminal",
             "justMyCode": true
         }

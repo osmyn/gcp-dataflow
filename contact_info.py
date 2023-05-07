@@ -13,14 +13,15 @@ class ExtractContactInfo(DoFn):
         try:
             # Identifiers (https://www.hl7.org/fhir/patient-definitions.html#Patient.identifier)
             if 'identifier' in msg:
+                # Just for this example, using the first identifier as the id
+                contactInfo['id'] = msg['identifier'][0]['value']
+                
                 identifiers = {}
                 for identifier in msg['identifier']:
                     system = identifier['system']
                     value = identifier['value']
                     identifiers[system] = value
                 contactInfo['identifiers'] = identifiers
-                # Just for this example, using the first identifier as the id
-                contactInfo['id'] = identifiers[0]
 
             # Name (https://www.hl7.org/fhir/patient-definitions.html#Patient.name)
             if 'name' in msg:
