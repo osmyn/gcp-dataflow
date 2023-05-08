@@ -76,7 +76,10 @@ def runPipeline(pipeline_options: CustomOptions):
 
 if __name__=='__main__':
     try:
-        options=PipelineOptions(sys.argv)
+        # remove file name from args
+        args = sys.argv.copy()
+        args.pop(0)
+        options=PipelineOptions(args)
         
         # Set `save_main_session` to True so DoFns can access globally imported modules.
         options.view_as(SetupOptions).save_main_session = True
